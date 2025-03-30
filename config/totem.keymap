@@ -111,10 +111,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp ESC    &kp HOME   &kp UP    &kp END    &kp LBRC    &kp PG_UP  &kp HOME   &kp UP       &kp END  &kp KP_PLUS
-        &kp LGUI  &kp LALT   &kp LCTRL  &kp LSHFT  &kp LBKT    &kp PG_DN  &kp LEFT   &kp DOWN     &kp RIGHT  &kp KP_MINUS
-&trans  &kp DEL    &kp PG_UP  &kp CAPS  &kp PG_DN  &kp LPAR    &kp RPAR   &kp K_CUT  &kp K_COPY   &kp K_PASTE  &kp KP_MULTIPLY  &trans
-                              &trans    &trans     &trans      &mo ADJ   &kp KP_N0  &trans
+        &kp ESC   &trans    &kp DELETE  &kp BACKSPACE  &kp K_REDO    &kp PG_UP  &kp HOME   &kp UP      &kp END      &trans
+        &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT      &kp K_UNDO    &kp PG_DN  &kp LEFT   &kp DOWN    &kp RIGHT    &trans
+&trans  &trans    &trans    &kp CAPS    &caps_word     &kp LPAR      &trans     &kp K_CUT  &kp K_COPY  &kp K_PASTE  &trans  &trans
+                            &trans      &trans         &trans        &mo ADJ    &trans     &trans
             >;
         };
 
