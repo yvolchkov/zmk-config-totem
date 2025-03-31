@@ -88,7 +88,7 @@
            &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J    &kp L        &kp U        &kp Y       &kp SEMICOLON
            &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M    &mt RSHFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O
 &kp GRAVE  &kp Z       &kp X       &kp C        &kp D        &kp V        &kp K    &kp H        &kp COMMA    &kp DOT     &kp FSLH       &kp BSLH
-                                   &kp DEL      &lt NAV TAB  &kp SPACE    &kp RET  &lt SYM ESC  &kp BSPC
+                                   &kp DEL      &lt NAV SPACE  &kp TAB    &kp RET  &lt SYM ESC  &kp BSPC
             >;
         };
 
@@ -112,8 +112,8 @@
 
             bindings = <
         &kp ESC   &trans    &kp DELETE  &kp BACKSPACE  &kp K_REDO    &kp PG_UP  &kp HOME   &kp UP      &kp END      &trans
-        &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT      &kp K_UNDO    &kp PG_DN  &kp LEFT   &kp DOWN    &kp RIGHT    &trans
-&trans  &trans    &trans    &kp CAPS    &caps_word     &kp LPAR      &trans     &kp K_CUT  &kp K_COPY  &kp K_PASTE  &trans  &trans
+        &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT      &kp K_UNDO    &kp PG_DN  &kp LEFT   &kp DOWN    &kp UP    &kp RIGHT
+&trans  &trans    &trans    &kp CAPS    &caps_word     &kp LPAR      &trans     &kp K_CUT  &kp PG_DN   &kp PG_UP  &trans  &trans
                             &trans      &trans         &trans        &mo ADJ    &trans     &trans
             >;
         };
