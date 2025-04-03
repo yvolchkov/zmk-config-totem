@@ -138,7 +138,7 @@
             bindings = <
         &trans     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &kp ASTERISK  &kp DELETE  &kp BACKSPACE  &trans    &kp ESCAPE
         &kp COLON  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS        &kp SLASH     &kp RSHFT   &kp RCTRL      &kp RALT  &kp RGUI
-&trans  &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS       &kp EQUAL     &trans      &trans         &trans    &trans      &trans
+&trans  &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS       &kp EQUAL     &none       &none          &trans    &trans      &trans
                                  &trans        &trans        &trans          &trans        &trans      &trans
             >;
         };
@@ -148,7 +148,7 @@
             bindings = <
         &tripple_back_tick  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp DELETE  &kp BACKSPACE  &trans    &kp ESCAPE
         &kp COLON           &kp DOLLAR       &kp PERCENT   &kp CARET             &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp RSHFT   &kp RCTRL      &kp RALT  &kp RGUI
-&trans  &kp GRAVE           &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &trans      &trans         &trans    &trans      &trans
+&trans  &kp GRAVE           &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp MINUS   &kp UNDER      &trans    &trans      &trans
                                              &trans        &trans                &trans                  &trans                 &trans      &trans
             >;
         };
