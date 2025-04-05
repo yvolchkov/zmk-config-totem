@@ -29,6 +29,8 @@
     tapping-term-ms = <170>;
 };
 
+#define COMBO_REQUIRE_PRIOR_IDLE_MS 100
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -37,27 +39,32 @@
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
+            require-prior-idle-ms = <COMBO_REQUIRE_PRIOR_IDLE_MS>;
         };
 
         combo_tvp {
             timeout-ms = <100>;
             key-positions = <11 12 13>;
             bindings = <&tog 6>;
+            require-prior-idle-ms = <COMBO_REQUIRE_PRIOR_IDLE_MS>;
         };
 
         enter {
             bindings = <&kp ENTER>;
             key-positions = <16 17 18>;
+            require-prior-idle-ms = <COMBO_REQUIRE_PRIOR_IDLE_MS>;
         };
 
         underscore {
             bindings = <&kp UNDERSCORE>;
             key-positions = <9 8 7>;
+            require-prior-idle-ms = <COMBO_REQUIRE_PRIOR_IDLE_MS>;
         };
 
         minus {
             bindings = <&kp MINUS>;
             key-positions = <7 8>;
+            require-prior-idle-ms = <COMBO_REQUIRE_PRIOR_IDLE_MS>;
         };
     };
 
