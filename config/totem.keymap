@@ -77,7 +77,7 @@
         combo_tvp {
             timeout-ms = <100>;
             key-positions = <11 12 13>;
-            bindings = <&tog 8>;
+            bindings = <&tog 0>;
             require-prior-idle-ms = <COMBO_REQUIRE_PRIOR_IDLE_MS>;
         };
 
@@ -166,17 +166,17 @@
            &kp Q        &kp W        &kp E         &kp R         &kp T                            &kp Y                          &kp U            &kp I         &kp O        &kp P
            &lht LGUI A  &lht LALT S  &lht LCTRL D  &lht LSHFT F  &lht LA(LC(LG(LEFT_SHIFT))) G    &rht LA(LC(LG(LEFT_SHIFT))) H  &rht RSHFT J     &rht RCTRL K  &rht RALT L  &rht RGUI SEMICOLON
 &kp GRAVE  &kp Z        &kp X        &kp C         &kp V         &kp B                            &kp N                          &kp M            &kp COMMA     &kp DOT      &kp FSLH             &kp LEFT_BRACKET
-                                     &kp DEL       &lt 2 SPACE   &kp TAB                          &lt 0 ENTER                    &lt 3 BACKSPACE  &lt 0 DELETE
+                                     &kp DEL       &lt 2 SPACE   &kp TAB                          &lt 5 ENTER                    &lt 3 BACKSPACE  &lt 0 DELETE
             >;
         };
 
         ru_layer {
             label = "ru-base";
             bindings = <
-           &kp Q        &kp W        &kp E         &kp R         &kp T                            &kp Y                          &kp U            &kp I         &kp O        &kp P
-           &lht LGUI A  &lht LALT S  &lht LCTRL D  &lht LSHFT F  &lht LA(LC(LG(LEFT_SHIFT))) G    &rht LA(LC(LG(LEFT_SHIFT))) H  &rht RSHFT J     &rht RCTRL K  &rht RALT L  &rht RGUI SEMICOLON
-&kp GRAVE  &kp Z        &kp X        &kp C         &kp V         &kp B                            &kp N                          &kp M            &kp COMMA     &kp DOT      &kp FSLH             &kp LEFT_BRACKET
-                                     &kp DEL       &lt 2 SPACE   &kp TAB                          &lt 0 ENTER                    &lt 4 BACKSPACE  &lt 0 DELETE
+           &kp NUMBER_2  &kp W        &kp E         &kp R         &kp T                            &kp Y                          &kp U         &kp I         &kp O        &kp P
+           &lht LGUI A   &lht LALT S  &lht LCTRL D  &lht LSHFT F  &lht LA(LC(LG(LEFT_SHIFT))) G    &rht LA(LC(LG(LEFT_SHIFT))) H  &rht RSHFT J  &rht RCTRL K  &rht RALT L  &rht RGUI SEMICOLON
+&kp GRAVE  &kp Z         &kp X        &kp C         &kp V         &kp B                            &kp N                          &kp M         &kp COMMA     &kp DOT      &kp FSLH             &kp LEFT_BRACKET
+                                      &trans        &trans        &trans                           &trans                         &trans        &trans
             >;
         };
 
@@ -263,30 +263,6 @@
         &bootloader  &bt BT_NXT  &bt BT_DISC 0  &bt BT_SEL 1  &bt BT_SEL 4    &trans  &kp F4  &kp F5  &kp F6  &kp F11
 &trans  &trans       &bt BT_PRV  &trans         &bt BT_SEL 2  &trans          &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
                                  &trans         &trans        &trans          &trans  &trans  &trans
-            >;
-        };
-
-        tvp1_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "TVP 1";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-            //             ┃ NEXT FILE ┃ MARK IN   ┃ ROTATE    ┃ MARK OUT  ┃ SHOW SNAP ┃   ┃           ┃           ┃           ┃           ┃           ┃
-            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃ TVP II    ┃ LEFT      ┃ PAN       ┃ RIGHT     ┃ PLAY/FLIP ┃   ┃           ┃           ┃           ┃           ┃           ┃
-            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃ FULLSCR   ┃ SHIFT     ┃ COPY      ┃ DELETE    ┃ PASTE     ┃ IMG MARK  ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
-            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃           ┃ UNDO/SAVE ┃  SEL/MOV  ┃   ┃           ┃           ┃           ┃
-            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
-            bindings = <
-       &kp TAB    &kp I      &kp LC(LALT)  &kp O        &kp LC(F20)    &none  &none  &none  &none  &none
-       &lt 9 L    &kp LEFT   &kp LALT      &kp RIGHT    &kp SPACE      &none  &none  &none  &none  &none
-&kp J  &kp LSHFT  &kp LC(C)  &kp BSPC      &kp LC(V)    &kp LC(F19)    &none  &none  &none  &none  &none  &none
-                             &trans        &kp LC(F14)  &kp LC(F13)    &none  &none  &none
             >;
         };
 
