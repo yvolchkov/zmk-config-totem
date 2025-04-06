@@ -180,9 +180,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp ESC   &trans    &kp DELETE  &kp BACKSPACE  &kp K_REDO    &kp DOLLAR  &kp HOME        &none           &none         &kp END
-        &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT      &kp K_UNDO    &kp MINUS   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
-&trans  &trans    &trans    &kp CAPS    &caps_word     &trans        &kp PIPE    &kp SQT         &kp PAGE_DOWN   &kp PAGE_UP   &kp DOUBLE_QUOTES  &trans
+        &kp ESC   &trans    &kp DELETE  &kp BACKSPACE  &kp K_REDO    &kp DOLLAR  &kp HOME        &kp LS(LA(LC(F18)))  &kp LS(LA(LC(F19)))  &kp END
+        &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT      &kp K_UNDO    &kp MINUS   &kp LEFT_ARROW  &kp DOWN_ARROW       &kp UP_ARROW         &kp RIGHT_ARROW
+&trans  &trans    &trans    &kp CAPS    &caps_word     &trans        &kp PIPE    &kp SQT         &kp PAGE_DOWN        &kp PAGE_UP          &kp DOUBLE_QUOTES  &trans
                             &trans      &trans         &trans        &mo 5       &trans          &trans
             >;
         };
