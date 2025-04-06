@@ -180,9 +180,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp ESC   &trans    &kp DELETE  &kp BACKSPACE  &kp K_REDO    &kp K_REDO  &kp HOME        &kp UP_ARROW    &kp END          &kp K_UNDO
-        &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT      &kp K_UNDO    &caps_word  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none
-&trans  &trans    &trans    &kp CAPS    &caps_word     &trans        &kp PIPE    &kp PAGE_DOWN   &kp PAGE_UP     &none            &none       &trans
+        &kp ESC   &trans    &kp DELETE  &kp BACKSPACE  &kp K_REDO    &kp DOLLAR  &kp HOME        &none           &none         &kp END
+        &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT      &kp K_UNDO    &kp MINUS   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
+&trans  &trans    &trans    &kp CAPS    &caps_word     &trans        &kp PIPE    &kp PAGE_DOWN   &kp PAGE_DOWN   &kp PAGE_UP   &none            &trans
                             &trans      &trans         &trans        &mo 5       &trans          &trans
             >;
         };
@@ -190,10 +190,10 @@
         nums_layer {
             label = "NUMS";
             bindings = <
-        &trans     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &kp ASTERISK  &kp DELETE  &kp BACKSPACE  &trans    &kp ESCAPE
-        &kp COLON  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS        &kp SLASH     &kp RSHFT   &kp RCTRL      &kp RALT  &kp RGUI
-&trans  &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS       &kp EQUAL     &none       &none          &none     &trans      &trans
-                                 &trans        &trans        &trans          &trans        &trans      &trans
+        &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &kp ASTERISK  &kp DELETE  &kp BACKSPACE  &trans    &kp ESCAPE
+        &kp COLON     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS        &kp SLASH     &kp RSHFT   &kp RCTRL      &kp RALT  &kp RGUI
+&trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS       &kp EQUAL     &none       &none          &none     &trans      &trans
+                                    &trans        &trans        &trans          &trans        &trans      &trans
             >;
         };
 
