@@ -10,6 +10,7 @@
 //
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
+#include <locale/keys_az_cyrillic.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -77,7 +78,7 @@
         combo_tvp {
             timeout-ms = <100>;
             key-positions = <11 12 13>;
-            bindings = <&tog 6>;
+            bindings = <&tog 7>;
             require-prior-idle-ms = <COMBO_REQUIRE_PRIOR_IDLE_MS>;
         };
 
@@ -107,6 +108,16 @@
         right_bracket {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <28 29>;
+        };
+
+        ru_layer {
+            bindings = <&to 1>;
+            key-positions = <1 2 3>;
+        };
+
+        eng-lauer {
+            bindings = <&to 0>;
+            key-positions = <11 12 13>;
         };
     };
 
@@ -159,7 +170,16 @@
            &kp Q        &kp W        &kp E         &kp R         &kp T                            &kp Y                          &kp U            &kp I         &kp O        &kp P
            &lht LGUI A  &lht LALT S  &lht LCTRL D  &lht LSHFT F  &lht LA(LC(LG(LEFT_SHIFT))) G    &rht LA(LC(LG(LEFT_SHIFT))) H  &rht RSHFT J     &rht RCTRL K  &rht RALT L  &rht RGUI SEMICOLON
 &kp GRAVE  &kp Z        &kp X        &kp C         &kp V         &kp B                            &kp N                          &kp M            &kp COMMA     &kp DOT      &kp FSLH             &kp LEFT_BRACKET
-                                     &kp DEL       &lt 1 SPACE   &kp TAB                          &lt 3 ENTER                    &lt 2 BACKSPACE  &lt 3 DELETE
+                                     &kp DEL       &lt 2 SPACE   &kp TAB                          &lt 4 ENTER                    &lt 3 BACKSPACE  &lt 4 DELETE
+            >;
+        };
+
+        ru_layer {
+            bindings = <
+        &none               &trans    &kp DELETE  &kp BACKSPACE  &kp K_REDO    &kp DOLLAR  &kp HOME        &none           &none         &kp END
+        &kp AZ_CYRILLIC_EF  &kp LALT  &kp LCTRL   &kp LSHFT      &kp K_UNDO    &kp MINUS   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
+&trans  &trans              &trans    &kp CAPS    &caps_word     &trans        &kp PIPE    &kp SQT         &kp PAGE_DOWN   &kp PAGE_UP   &kp DOUBLE_QUOTES  &trans
+                                      &trans      &trans         &trans        &mo 6       &trans          &trans
             >;
         };
 
@@ -183,7 +203,7 @@
         &kp ESC   &trans    &kp DELETE  &kp BACKSPACE  &kp K_REDO    &kp DOLLAR  &kp HOME        &none           &none         &kp END
         &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT      &kp K_UNDO    &kp MINUS   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
 &trans  &trans    &trans    &kp CAPS    &caps_word     &trans        &kp PIPE    &kp SQT         &kp PAGE_DOWN   &kp PAGE_UP   &kp DOUBLE_QUOTES  &trans
-                            &trans      &trans         &trans        &mo 5       &trans          &trans
+                            &trans      &trans         &trans        &mo 6       &trans          &trans
             >;
         };
 
@@ -227,7 +247,7 @@
         &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS            &kp ASTERISK  &kp SQT     &kp DQT
         &kp RA(A)    &trans       &kp RA(S)  &trans    &trans       &kp C_MUTE    &kp LS(RA(DOLLAR))  &kp RA(N5)    &kp RA(N4)  &kp RA(O)
 &trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp EXCLAMATION     &kp AT_SIGN   &kp HASH    &kp BSLH   &trans
-                                  &trans     &gif      &mo 5        &trans        &kp C_PP            &trans
+                                  &trans     &gif      &mo 6        &trans        &kp C_PP            &trans
             >;
         };
 
@@ -273,7 +293,7 @@
 
             bindings = <
        &kp TAB    &kp I      &kp LC(LALT)  &kp O        &kp LC(F20)    &none  &none  &none  &none  &none
-       &lt 7 L    &kp LEFT   &kp LALT      &kp RIGHT    &kp SPACE      &none  &none  &none  &none  &none
+       &lt 8 L    &kp LEFT   &kp LALT      &kp RIGHT    &kp SPACE      &none  &none  &none  &none  &none
 &kp J  &kp LSHFT  &kp LC(C)  &kp BSPC      &kp LC(V)    &kp LC(F19)    &none  &none  &none  &none  &none  &none
                              &trans        &kp LC(F14)  &kp LC(F13)    &none  &none  &none
             >;
