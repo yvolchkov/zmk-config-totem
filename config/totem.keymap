@@ -237,7 +237,7 @@
             bindings = <
         &trans     &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
         &trans     &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(P)  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LA(P)  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                            &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
