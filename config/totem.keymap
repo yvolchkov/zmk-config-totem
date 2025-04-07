@@ -197,10 +197,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp ESC   &trans    &kp DELETE  &kp BACKSPACE  &kp K_REDO    &kp DOLLAR  &kp HOME        &to_en          &to_ru        &kp END
-        &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT      &kp K_UNDO    &kp MINUS   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
-&trans  &trans    &trans    &kp CAPS    &caps_word     &trans        &kp PIPE    &kp SQT         &kp PAGE_DOWN   &kp PAGE_UP   &kp BACKSLASH    &trans
-                            &trans      &trans         &trans        &mo 8       &trans          &trans
+        &kp ESC   &trans     &caps_word  &none      &none     &kp DOLLAR  &kp HOME        &to_en          &to_ru        &kp END
+        &kp LGUI  &kp LALT   &kp LCTRL   &kp LSHFT  &none     &kp MINUS   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
+&trans  &trans    &kp LG(Z)  &kp LG(C)   &kp LG(V)  &trans    &kp PIPE    &kp SQT         &kp PAGE_DOWN   &kp PAGE_UP   &kp BACKSLASH    &trans
+                             &trans      &trans     &trans    &mo 8       &trans          &trans
             >;
         };
 
