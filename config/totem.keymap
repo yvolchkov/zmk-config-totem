@@ -114,11 +114,6 @@
             require-prior-idle-ms = <10>;
             timeout-ms = <100>;
         };
-
-        question_mark {
-            bindings = <&kp QUESTION>;
-            key-positions = <30 29>;
-        };
     };
 
     macros {
