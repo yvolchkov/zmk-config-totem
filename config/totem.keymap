@@ -222,10 +222,10 @@
         nums_layer {
             label = "NUMS";
             bindings = <
-        &kp GRAVE      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL    &kp ASTERISK  &kp DELETE  &kp BACKSPACE  &trans    &kp ESCAPE
-        &kp SEMICOLON  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS     &kp SLASH     &kp RSHFT   &kp RCTRL      &kp RALT  &kp RGUI
-&trans  &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS    &kp EQUAL     &none       &none          &none     &trans      &trans
-                                     &trans        &trans        &trans       &trans        &trans      &trans
+           &kp GRAVE      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL    &kp ASTERISK  &kp DELETE  &kp BACKSPACE  &trans    &kp ESCAPE
+           &kp SEMICOLON  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS     &kp SLASH     &kp RSHFT   &kp RCTRL      &kp RALT  &kp RGUI
+&kp COMMA  &kp PERIOD     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS    &kp EQUAL     &none       &none          &none     &trans      &trans
+                                        &none         &kp N0        &trans       &trans        &trans      &trans
             >;
         };
 
