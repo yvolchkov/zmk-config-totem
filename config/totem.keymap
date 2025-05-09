@@ -169,10 +169,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp Q        &kp W        &kp E         &kp R         &kp T                            &kp Y                          &kp U            &kp I         &kp O        &kp P
-           &lht LGUI A  &lht LALT S  &lht LCTRL D  &lht LSHFT F  &lht LA(LC(LG(LEFT_SHIFT))) G    &rht LA(LC(LG(LEFT_SHIFT))) H  &rht RSHFT J     &rht RCTRL K  &rht RALT L  &rht RGUI SEMICOLON
-&kp GRAVE  &kp Z        &kp X        &kp C         &kp V         &kp B                            &kp N                          &kp M            &kp COMMA     &kp DOT      &kp FSLH             &kp APOSTROPHE
-                                     &kp DEL       &lt 2 SPACE   &lt 4 TAB                        &mo 6                          &lt 4 BACKSPACE  &lt 0 DELETE
+                 &kp Q        &kp W        &kp E         &kp R         &kp T                            &kp Y                          &kp U            &kp I         &kp O        &kp P
+                 &lht LGUI A  &lht LALT S  &lht LCTRL D  &lht LSHFT F  &lht LA(LC(LG(LEFT_SHIFT))) G    &rht LA(LC(LG(LEFT_SHIFT))) H  &rht RSHFT J     &rht RCTRL K  &rht RALT L  &rht RGUI SEMICOLON
+&mt SPACE GRAVE  &kp Z        &kp X        &kp C         &kp V         &kp B                            &kp N                          &kp M            &kp COMMA     &kp DOT      &kp FSLH             &kp APOSTROPHE
+                                           &kp DEL       &lt 2 SPACE   &lt 4 TAB                        &mo 6                          &lt 4 BACKSPACE  &lt 0 DELETE
             >;
         };
 
