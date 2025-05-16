@@ -65,12 +65,14 @@
         };
 
         /* ───── Magic Shift: tap = sticky, hold = normal ───── */
+
         hs: hold_sticky {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&kp>, <&sk>;
+
             display-name = "Hold-Sticky";
         };
     };
@@ -82,13 +84,6 @@
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
-            require-prior-idle-ms = <COMBO_REQUIRE_PRIOR_IDLE_MS>;
-        };
-
-        combo_tvp {
-            timeout-ms = <100>;
-            key-positions = <11 12 13>;
-            bindings = <&tog 0>;
             require-prior-idle-ms = <COMBO_REQUIRE_PRIOR_IDLE_MS>;
         };
 
@@ -185,10 +180,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                 &kp Q        &kp W        &kp E         &kp R         &kp T                            &kp Y                          &kp U            &kp I         &kp O        &kp P
-                 &lht LGUI A  &lht LALT S  &lht LCTRL D  &lht LSHFT F  &lht LA(LC(LG(LEFT_SHIFT))) G    &rht LA(LC(LG(LEFT_SHIFT))) H  &rht RSHFT J     &rht RCTRL K  &rht RALT L  &rht RGUI SEMICOLON
-&mt SPACE GRAVE  &kp Z        &kp X        &kp C         &kp V         &kp B                            &kp N                          &kp M            &kp COMMA     &kp DOT      &kp FSLH             &kp APOSTROPHE
-                                           &kp DEL       &lt 2 SPACE   &lt 4 TAB                        &lt 4 BACKSPACE  &hs RIGHT_SHIFT RIGHT_SHIFT                 &lt 0 DELETE
+                 &kp Q        &kp W        &kp E         &kp R         &kp T                            &kp Y                          &kp U                        &kp I         &kp O        &kp P
+                 &lht LGUI A  &lht LALT S  &lht LCTRL D  &lht LSHFT F  &lht LA(LC(LG(LEFT_SHIFT))) G    &rht LA(LC(LG(LEFT_SHIFT))) H  &rht RSHFT J                 &rht RCTRL K  &rht RALT L  &rht RGUI SEMICOLON
+&mt SPACE GRAVE  &kp Z        &kp X        &kp C         &kp V         &kp B                            &kp N                          &kp M                        &kp COMMA     &kp DOT      &kp FSLH             &kp APOSTROPHE
+                                           &kp DEL       &lt 2 SPACE   &lt 4 TAB                        &lt 4 BACKSPACE                &hs RIGHT_SHIFT RIGHT_SHIFT  &lt 0 DELETE
             >;
         };
 
