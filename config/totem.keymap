@@ -114,6 +114,11 @@
             require-prior-idle-ms = <10>;
             timeout-ms = <100>;
         };
+
+        caps-word {
+            bindings = <&caps_word>;
+            key-positions = <13 16>;
+        };
     };
 
     macros {
