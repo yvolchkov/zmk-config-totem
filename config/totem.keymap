@@ -78,12 +78,25 @@
 
         mod_repeat: mod_repeat {
             compatible = "zmk,behavior-hold-tap";
-            label = "MOD_REPEAT";
             bindings = <&mo>, <&key_repeat>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
+        };
+
+        swap: swapper {
+            compatible = "zmk,behavior-tri-state";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+            ignored-key-positions = <16 17 18 19>;
+        };
+
+        next_win: next_window {
+            compatible = "zmk,behavior-tri-state";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LGUI>;
+            ignored-key-positions = <16 17 18 19>;
         };
     };
 
@@ -224,7 +237,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp ESC    &trans         &caps_word  &none      &none     &kp DOLLAR  &kp HOME        &to_en          &to_ru        &kp END
+        &kp ESC    &trans         &swap       &next_win  &none     &kp DOLLAR  &kp HOME        &to_en          &to_ru        &kp END
         &kp LGUI   &kp LALT       &kp LCTRL   &kp LSHFT  &none     &kp MINUS   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
 &trans  &kp RG(Z)  &kp LG(LS(Z))  &kp LG(C)   &kp LG(V)  &trans    &kp PIPE    &kp SQT         &kp PAGE_DOWN   &kp PAGE_UP   &kp BACKSLASH    &trans
                                   &trans      &trans     &trans    &mo 8       &trans          &trans
