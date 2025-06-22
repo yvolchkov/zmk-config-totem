@@ -10,12 +10,8 @@
 //
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
-
 #define HOST_OS 2
+
 #include "zmk-helpers/helper.h"
 
 #define BASE 0
@@ -40,7 +36,12 @@
 #define THUMBS LEFT_THUMBS RIGHT_THUMBS
 
 // Source unicode-chars for desired languages
+
 #include "zmk-helpers/unicode-chars/german.dtsi"
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
     behaviors {
@@ -110,9 +111,21 @@
         leader: leader {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
-            de_ae { sequence = <A E>; bindings = <&de_ae>; };
-            de_oe { sequence = <O E>; bindings = <&de_oe>; };
-            de_ue { sequence = <U E>; bindings = <&de_ue>; };
+
+            de_ae {
+                sequence = <A E>;
+                bindings = <&de_ae>;
+            };
+
+            de_oe {
+                sequence = <O E>;
+                bindings = <&de_oe>;
+            };
+
+            de_ue {
+                sequence = <U E>;
+                bindings = <&de_ue>;
+            };
         };
     };
 
@@ -230,7 +243,7 @@
                  &kp Q        &kp W        &kp E         &kp R         &kp T                            &kp Y                          &kp U                        &kp I         &kp O        &kp P
                  &lht LGUI A  &lht LALT S  &lht LCTRL D  &lht LSHFT F  &lht LA(LC(LG(LEFT_SHIFT))) G    &rht LA(LC(LG(LEFT_SHIFT))) H  &rht RSHFT J                 &rht RCTRL K  &rht RALT L  &rht RGUI SEMICOLON
 &mt SPACE GRAVE  &kp Z        &kp X        &kp C         &kp V         &kp B                            &kp N                          &kp M                        &kp COMMA     &kp DOT      &kp FSLH             &kp APOSTROPHE
-                                           &kp TAB       &lt 2 SPACE   &mod_repeat 4 0                  &lt 4 BACKSPACE                &hs RIGHT_SHIFT RIGHT_SHIFT  &lt 0 DELETE
+                                           &kp TAB       &lt 2 SPACE   &mod_repeat 4 0                  &lt 4 BACKSPACE                &hs RIGHT_SHIFT RIGHT_SHIFT  &lt 6 DELETE
             >;
         };
 
@@ -282,7 +295,7 @@
             bindings = <
            &kp GRAVE      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL    &kp ASTERISK  &kp DELETE  &kp BACKSPACE  &trans    &kp ESCAPE
            &kp SEMICOLON  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS     &kp SLASH     &kp RSHFT   &kp RCTRL      &kp RALT  &kp RGUI
-&kp COMMA  &kp PERIOD     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS    &kp EQUAL     &none       &none          &none     &trans      &trans
+&kp COMMA  &kp PERIOD     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS    &kp EQUAL     &none       &kp COMMA      &none     &trans      &trans
                                         &none         &kp N0        &trans       &trans        &trans      &trans
             >;
         };
