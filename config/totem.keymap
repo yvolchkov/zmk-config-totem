@@ -10,9 +10,16 @@
 //
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-#define HOST_OS 2
 
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#define HOST_OS 2
 #include "zmk-helpers/helper.h"
+// Source unicode-chars for desired languages
+#include "zmk-helpers/unicode-chars/german.dtsi"
 
 #define BASE 0
 #define NAV  1
@@ -35,13 +42,7 @@
 #define RIGHT_THUMBS 35 36 37
 #define THUMBS LEFT_THUMBS RIGHT_THUMBS
 
-// Source unicode-chars for desired languages
 
-#include "zmk-helpers/unicode-chars/german.dtsi"
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 
 / {
     behaviors {
