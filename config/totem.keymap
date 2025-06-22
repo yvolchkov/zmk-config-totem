@@ -15,6 +15,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#define HOST_OS 2
+#include "zmk-helpers/helper.h"
+
 #define BASE 0
 #define NAV  1
 #define SYM  2
@@ -35,6 +38,9 @@
 #define LEFT_THUMBS  32 33 34
 #define RIGHT_THUMBS 35 36 37
 #define THUMBS LEFT_THUMBS RIGHT_THUMBS
+
+// Source unicode-chars for desired languages
+#include "zmk-helpers/unicode-chars/german.dtsi"
 
 / {
     behaviors {
@@ -100,6 +106,14 @@
 
             ignored-key-positions = <16 17 18 19>;
         };
+
+        leader: leader {
+            compatible = "zmk,behavior-leader-key";
+            #binding-cells = <0>;
+            de_ae { sequence = <A E>; bindings = <&de_ae>; };
+            de_oe { sequence = <O E>; bindings = <&de_oe>; };
+            de_ue { sequence = <U E>; bindings = <&de_ue>; };
+        };
     };
 
     combos {
@@ -147,6 +161,11 @@
         left_par {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <22 23>;
+        };
+
+        leader {
+            bindings = <&leader>;
+            key-positions = <11 12>;
         };
 
         right_par {

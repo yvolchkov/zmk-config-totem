@@ -5,11 +5,22 @@ manifest:
     - name: urob
       url-base: https://github.com/urob
   projects:
+  # Apply patch to fix child nodes issue
     - name: zmk
-      remote: zmkfirmware
-      revision: main
+      remote: urob
+      revision: v0.2+fix-child-nodes
       import: app/west.yml
+    # - name: zmk
+    #   remote: zmkfirmware
+    #   revision: main
+    #   import: app/west.yml
     - name: zmk-tri-state
+      remote: urob
+      revision: main
+    - name: zmk-leader-key
+      remote: urob
+      revision: main
+    - name: zmk-helpers
       remote: urob
       revision: main
   self:
