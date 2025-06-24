@@ -10,16 +10,17 @@
 //
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
+#define HOST_OS 2
+
+#include <zmk-helpers/helper.h>
+
+// Source unicode-chars for desired languages
 
 #include <behaviors.dtsi>
+#include <zmk-helpers/unicode-chars/german.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-
-#define HOST_OS 2
-#include "zmk-helpers/helper.h"
-// Source unicode-chars for desired languages
-#include "zmk-helpers/unicode-chars/german.dtsi"
 
 #define BASE 0
 #define NAV  1
@@ -41,8 +42,6 @@
 #define LEFT_THUMBS  32 33 34
 #define RIGHT_THUMBS 35 36 37
 #define THUMBS LEFT_THUMBS RIGHT_THUMBS
-
-
 
 / {
     behaviors {
@@ -214,7 +213,7 @@
         to_ru: to_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LA(LC(F19))) &to 1>;
+            bindings = <&kp LS(LA(LC(F19))) &to 2>;
             label = "TO_RU";
         };
     };
@@ -224,7 +223,7 @@
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        base_layer {
+        qwerty_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
             label = "BASE";
@@ -244,7 +243,16 @@
                  &kp Q        &kp W        &kp E         &kp R         &kp T                            &kp Y                          &kp U                        &kp I         &kp O        &kp P
                  &lht LGUI A  &lht LALT S  &lht LCTRL D  &lht LSHFT F  &lht LA(LC(LG(LEFT_SHIFT))) G    &rht LA(LC(LG(LEFT_SHIFT))) H  &rht RSHFT J                 &rht RCTRL K  &rht RALT L  &rht RGUI SEMICOLON
 &mt SPACE GRAVE  &kp Z        &kp X        &kp C         &kp V         &kp B                            &kp N                          &kp M                        &kp COMMA     &kp DOT      &kp FSLH             &kp APOSTROPHE
-                                           &kp TAB       &lt 2 SPACE   &mod_repeat 4 0                  &lt 4 BACKSPACE                &hs RIGHT_SHIFT RIGHT_SHIFT  &lt 6 DELETE
+                                           &kp TAB       &lt 3 SPACE   &mod_repeat 5 0                  &lt 5 BACKSPACE                &hs RIGHT_SHIFT RIGHT_SHIFT  &lt 7 DELETE
+            >;
+        };
+
+        graphite {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -278,7 +286,7 @@
         &kp ESC    &trans         &swap      &next_win  &none     &kp DOLLAR  &kp HOME        &to_en          &to_ru        &kp END
         &kp LGUI   &kp LALT       &kp LCTRL  &kp LSHFT  &none     &kp MINUS   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
 &trans  &kp RG(Z)  &kp LG(LS(Z))  &kp LG(C)  &kp LG(V)  &trans    &kp PIPE    &kp SQT         &kp PAGE_DOWN   &kp PAGE_UP   &kp BACKSLASH    &trans
-                                  &trans     &trans     &trans    &mo 8       &trans          &trans
+                                  &trans     &trans     &trans    &mo 9       &trans          &trans
             >;
         };
 
@@ -382,18 +390,18 @@
         compatible = "zmk,conditional-layers";
 
         nums-ru {
-            if-layers = <1 4>;
-            then-layer = <5>;
+            if-layers = <2 5>;
+            then-layer = <6>;
         };
 
         syms-ru {
-            if-layers = <1 6>;
-            then-layer = <7>;
+            if-layers = <2 7>;
+            then-layer = <8>;
         };
 
         nav-ru {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <2 3>;
+            then-layer = <4>;
         };
     };
 };
